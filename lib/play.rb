@@ -36,3 +36,10 @@ def turn(board)
 end
 
 # Define your play method below
+def play(board)
+  game_finished = false
+  while !game_finished do
+    turn(board)
+    game_finished = board.all? { |x|  x.strip != "" }
+  end
+end
